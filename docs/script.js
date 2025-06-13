@@ -16,7 +16,7 @@ async function calculate() {
     }
 
     try {
-        const response = await fetch("http://172.17.15.7:3000/calculate", {
+        const response = await fetch("https://assign-dbpw.onrender.com/calculate", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
