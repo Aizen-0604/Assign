@@ -16,7 +16,7 @@ async function calculate() {
     }
 
     try {
-        const response = await fetch("https://assign-5mej.onrender.com/calculate", {
+        const response = await fetch("https://assign-5mej.onrender.com", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
