@@ -4,11 +4,10 @@ const bodyParser = require("body-parser");
 const { execFile } = require("child_process");
 
 const app = express();
-const port = 10000;
+const port = process.env.PORT || 10000; // <-- THIS LINE CHANGED
 
-app.use(cors()); // Allow cross-origin requests
-app.use(bodyParser.json()); // Parse JSON bodies
-// OR: app.use(express.json()); // Either works
+app.use(cors()); 
+app.use(bodyParser.json()); 
 
 app.post("/calculate", (req, res) => {
     const { num1, num2, operation } = req.body;
@@ -38,5 +37,5 @@ app.post("/calculate", (req, res) => {
 });
 
 app.listen(port,() => {
-    console.log(`Server listening on http://localhost:${port}`);
+    console.log(`Serverrr running on port ${PORT}`);
 });
