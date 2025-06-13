@@ -30,6 +30,7 @@ app.post("/calculate", (req, res) => {
     execFile(executable, [num1.toString(), num2.toString()], (error, stdout, stderr) => {
         if (error) {
             console.error(`Error: ${stderr}`);
+            console.error(error);
             return res.status(500).send('Error performing operation');
         }
         res.send({ result: parseFloat(stdout.trim()) });
