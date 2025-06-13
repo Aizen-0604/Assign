@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Server-side Number Operations</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f4f4f4;
+            margin: 50px;
+        }
+
+        .calculator {
+            background: white;
+            padding: 20px;
+            display: inline-block;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        input[type="number"] {
+            width: 80%;
+            padding: 10px;
+            margin: 10px;
+            font-size: 16px;
+        }
+
+        input[type="radio"] {
+            margin: 10px 5px 10px 0;
+            accent-color: green;
+        }
+
+        .radio-group label {
+            margin-right: 15px;
+            font-size: 16px;
+            color: green;
+            font-weight: bold;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 18px;
+            margin: 5px;
+            cursor: pointer;
+            border: none;
+            background: #007bff;
+            color: white;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background: #0056b3;
+        }
+
+        h3 {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="calculate">
+        <h2>Server-side Number Operations</h2>
+        <input type="number" id="num1" placeholder="Enter first number">
+        <input type="number" id="num2" placeholder="Enter second number">
+
+        <div class="radio-group">
+            <label><input type="radio" name="operation" value="average"> Average</label>
+            <label><input type="radio" name="operation" value="maximum"> Maximum</label>
+            <label><input type="radio" name="operation" value="minimum"> Minimum</label>
+        </div>
+
+        <button onclick="calculate()">Calculate</button>
+
+        <h3 id="result"></h3>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
