@@ -4,10 +4,10 @@ const bodyParser = require("body-parser");
 const { execFile } = require("child_process");
 
 const app = express();
-const port = process.env.PORT || 10000; // <-- THIS LINE CHANGED
+const port = process.env.PORT || 10000; // Use Render's PORT or default
 
-app.use(cors()); 
-app.use(bodyParser.json()); 
+app.use(cors());
+app.use(bodyParser.json());
 
 app.post("/calculate", (req, res) => {
     const { num1, num2, operation } = req.body;
@@ -36,6 +36,7 @@ app.post("/calculate", (req, res) => {
     });
 });
 
-app.listen(port,() => {
-    console.log(`Serverrr running on port ${PORT}`);
+// Listen on 0.0.0.0 for cloud hosting, or omit for localhost dev
+app.listen(port, '0.0.0.0', () => {
+    console.log(`Server running on port ${port}`);
 });
