@@ -3,7 +3,7 @@ async function calculate() {
     const num2 = parseFloat(document.getElementById("num2").value);
     const operation = document.querySelector('input[name="operation"]:checked');
     const resultField = document.getElementById("result");
-    const APIURl="https://assign-dbpw.onrender.com/api/calculate';
+    
 
     if (isNaN(num1) || isNaN(num2)) {
         resultField.textContent = "Please enter valid numbers.";
